@@ -18,9 +18,11 @@ class SoraSDKManager {
      
      お手元のSoraの接続先を指定してください。
      */
-    private static let targetURL: URL = URL(string: "wss://sora.example.com/signaling")!
+    private static let targetURL: URL = URL(string: "wss://sora-labo.shiguredo.jp/signaling")!
+   
+    private static var signalingConnectMetadata = ["signaling_key": ""] 
     
-    /**
+     /**
      現在接続中のSora SDKのMediaChannelです。
      
      殆どの場合、アプリケーション全体で一つだけ同時にMediaChannelに接続することになるので、シングルトンとして用意すると便利に使えます。
