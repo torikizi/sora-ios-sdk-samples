@@ -62,6 +62,7 @@ class SoraSDKManager {
         // 引数で指定された値を設定します。
         configuration.videoCodec = videoCodec
         configuration.videoCapturerDevice = videoCapturerOption
+        configuration.signalingConnectMetadata = SoraSDKManager.signalingConnectMetadata
         
         // Soraに接続を試みます。
         let _ = Sora.shared.connect(configuration: configuration) { [weak self] mediaChannel, error in
